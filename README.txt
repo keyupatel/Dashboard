@@ -1,1 +1,1 @@
-# Project Title: Dashboard for POS System
+# Project Title: Dashboard for Restaurant POS System 
