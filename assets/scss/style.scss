@@ -1,0 +1,420 @@
+
+@use "var" as *;
+@use "mixins" as *;
+@use "sidebar" as *;
+@use "dashboard" as *;
+@use "modal" as *;
+@use "menu" as *;
+@use "footer" as *;
+body {
+  font-family: $body-font;
+  background: $background-color;
+  color: $heading-text-color;
+  font-size: 1rem;
+
+  // typography
+
+  h1{
+    font-size: $H1;
+    color: $heading-text-color;
+  }
+  h2{
+    font-size: $H2;
+    color: $heading-text-color;
+  }
+  h4{
+    font-size: $H4 !important;
+    color: $heading-text-color;
+  }
+  h5{
+    font-size: $h5 !important;
+    color: $heading-text-color;
+  }
+  h6{
+    font-size: $h6 !important;
+  }
+  p{
+    font-size: $p;
+    color: $paragraph-text-color;
+  }
+
+  // App Wraper 
+  .dashboard-app{
+    display: flex;
+  }
+  .card{
+    @include card;
+  }
+
+  .form-control{
+     @include form-control;
+     border-radius:  $radius-6 !important;
+  }
+  .w-25{
+    width: 25%;
+  }
+  .btn-custom{
+    @include btn-custom;
+  }
+  .primary-text{
+    color: $primary-color;
+  }
+  .paragraph-text{
+    color: $paragraph-text-color !important;
+  }
+  * a{
+    text-decoration: none;
+    color: $primary-color;
+    &:hover{
+        color: $secondary-color;
+    }
+  }
+  ul{
+    padding-left: 0;
+    margin-bottom: 0;
+    li{
+        list-style: none;
+    }
+  }
+    .input-group-text {
+        svg {
+            height: 24px;
+            width: 24px;
+            color: $heading-text-color;
+        }
+    }
+        
+  .login-content{
+    @include flex-center;
+    height: 100vh;
+    .card{
+        max-width: 37.5rem;
+        width: 100%;
+        padding: 2.5rem;
+        border-radius: $radius-30;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
+        .card-img{
+            @include border-bottom;
+            padding-bottom: 1.5rem;
+        }
+    }
+  } 
+  main{
+    padding: 3.13rem 2.5rem 0rem;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    overflow-y: auto;
+    width: 100%;
+    position: relative;
+    .topbar {
+      @include flex-center;
+      justify-content: space-between;
+    }
+  }
+  .bg-white{
+    background-color: $white-color;
+    color: $primary-color;
+  }
+  .link-text{
+    color: $heading-text-color;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px dotted $white-color;
+    &:hover{
+      color:$primary-color;      
+      border-bottom: 1px dotted $primary-color;
+    }
+  }
+  .bg--inprogress{
+    background-color: rgba($status-inprogress, .2);
+    color: $primary-color;
+  }
+  .bg--primary{
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+  .bg--success{
+    background-color: rgba($status-available, .2);
+  }
+  .badge--completed{
+    background-color: rgba($status-completed, .1);
+  }
+  .bg-success{
+    background-color: $status-available
+  }
+  
+  .bg-inprogress{
+    background-color: $status-inprogress;
+  }
+  .bg-completed{
+    background-color: $status-completed;
+  }
+  .bg-cleaning{
+    background-color: $status-cloning;
+  }
+  .bg-danger{
+    background-color: $status-reserved;
+  }
+  .panel{
+    @include panel;
+  }
+  .search{
+    .form-control{
+      background-color: $input-bg-color;
+      color: $heading-text-color;
+      border-right: none;      
+    }
+    .input-group-text{
+      background-color: $input-bg-color !important;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      svg{
+        path{
+           stroke: $heading-text-color;
+        }
+      }
+    }
+  }
+.account-avatar {
+    height: 3.2rem;
+    width: 3.2rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+.footer-collapsed{
+  footer{
+    left: 7rem;
+    transition: .3s all;
+    width: 95%;
+  }
+}
+.card-menu{
+  padding: 1.4rem 1.25rem;
+    .card-top-img{
+      position: relative;
+      height: 245px;
+      overflow: hidden;
+      @include flex-center;
+      img{
+        border-radius: $radius-15;
+            height: 100%;
+        width: 100%;
+       }
+       .badge {
+          background: $white-color;
+          padding: 0.6rem 1rem;
+          border-radius: 30px;
+          font-size: 1rem;
+          font-weight: 500;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          @include flex-center;
+      }
+      .badge--success{
+        background: $status-available;
+      }
+      .badge--disc{
+        background: $status-reserved;
+      }
+    }
+    .card-menu-content{
+      small{
+        font-size: 1rem;
+      }
+    }
+}
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  fill:  $heading-text-color;   /* for filled icons */
+  stroke: $heading-text-color /* for stroked icons */
+}
+// Tabs CSS
+#pills-tab{
+    .nav-item{
+       margin-right: 0.5rem;
+       &:last-child{
+        margin-right: 0rem;
+       }
+      .nav-link{
+        color: $heading-text-color;
+       // background-color: $white-color;
+        &:hover{
+          color: $white-color;
+          background-color: $primary-color;
+        }
+      }
+      .active{
+        color: $white-color;
+        background-color: $primary-color;
+      }
+
+    }
+}
+.input-group-button{
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: $radius-30;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: $primary-color;
+  svg{
+    path{
+      fill: $paragraph-text-color;
+    }
+  }
+  &:hover{
+    background-color: $primary-color;
+    svg{
+      path{
+        fill: $white-color;
+      }
+    }
+  }
+}
+:disabled{
+  background-color: $border-color;
+  svg{
+    path{
+      fill: $paragraph-text-color;
+    }
+  }
+  &:hover{
+   background-color: $border-color;
+   pointer-events: none; 
+   svg{
+      path{
+        fill: $paragraph-text-color;
+      }
+    } 
+  }
+}
+/* For Chrome, Safari, Edge, Opera */
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+   -webkit-appearance: none;
+}
+.text-small-color{
+  color: $Secondary-heading-text-color;
+  font-size: 1rem;
+  font-weight: $medium;
+}
+.custom-table{
+  @include table;
+}
+.border-bottom-1{
+  border-bottom: 1px solid $border-color;
+}
+.btn-secondary{
+  @include btn-secondary;
+}
+.dots{
+  height: 1.15rem;
+  width: 1.15rem;
+  border-radius: $radius-30;
+  display: inline-block;
+}
+ 
+   .chart-container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .chart-header h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .chart-header span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .account-expenses{
+      svg{
+        path{
+          stroke: $heading-text-color;
+        }
+        
+      }
+    }
+    .account-salaries{
+      svg{
+        path{
+          fill: $heading-text-color;
+        }
+        
+      }
+    }
+    .form-switch {
+      .form-check-input{
+        margin-top: 0;
+        height: 3rem;
+        width: 6rem;
+        background-color: #D9D9D9;
+        --bs-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+        &:checked{
+          background-color: $primary-color;
+          border-color: $primary-color;
+        }
+        &:focus{
+          box-shadow: none;
+          outline: none;
+          border: none;
+          --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+        }
+      }
+      
+    }
+    .language-dropdown {
+    padding: 0.8rem 1rem;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    text-align: left;
+    min-width: 10rem;
+    &:focus{
+      box-shadow: none;
+      outline: none;
+    }
+}
+.badge.badge--success{
+  background-color: rgba($status-available, .2);
+  color: $status-available;
+  border-radius: $radius-30;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  @include flex-center;
+  .badge-icon{
+    svg{
+      height: 1.25rem;
+      width: 1.25rem;
+      path{
+        stroke: $status-available;
+      }
+    }
+  }
+}
+.paragraph-text{
+  color: $paragraph-text-color;
+}
+.body-color{
+   color: $heading-text-color;
+}

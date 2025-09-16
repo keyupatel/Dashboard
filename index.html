@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Restaurant Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-app">
+       <!-- Sidebar start here -->  
+        <aside class="sidebar" id="Sidebar" aria-label="primary">
+              <div class="brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/images/logo.svg" alt="The Grand Jamanvar" class="brand-logo" />  
+                     <img src="assets/images/fav-logo.png" alt="The Grand Jamanvar" class="fav-brand-logo" />                
+                </a>
+            </div>
+            <button class="sidebar-toggle-btn" id="SidebarToggleBTN">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/></svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav-list ps-0" role="list">
+                <li>
+                  <a href="javascript:void(0);" class="nav-link nav-link-active">
+                    <span class="menu-svg">
+                      <!-- <svg class="icon" hight="24" width="24"><use href="assets/icons.svg#icon-dashboard"></use></svg>  -->
+                       <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Dashboard
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="menu.html" class="nav-link">
+                    <span class="menu-svg">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 2H5V22H3V2ZM10 6H17V8H10V6ZM10 10H17V12H10V10Z" fill="white"/>
+                        <path d="M19 2H6V22H19C20.103 22 21 21.103 21 20V4C21 2.897 20.103 2 19 2ZM19 20H8V4H19V20Z" fill="white"/>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Menu
+                    </span>
+                    
+                  </a>
+                </li>
+                <li>
+                  <a href="orders.html" class="nav-link">
+                    <span class="menu-svg whitebg-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_8_87)" >
+                        <path d="M17.25 21.75H11.25M8.75 13.25H15.25M8.75 9.75H15.25M8.75 6.25H15.25M20.25 0.75H18.75V6.25H23.25V3.75C23.25 2.95435 22.9339 2.19129 22.3713 1.62868C21.8087 1.06607 21.0456 0.75 20.25 0.75Z" fill="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 17.25H3.75C2.95435 17.25 2.19129 17.5661 1.62868 18.1287C1.06607 18.6913 0.75 19.4544 0.75 20.25V23.25H11.25V19.5C11.25 18.9033 11.4871 18.331 11.909 17.909C12.331 17.4871 12.9033 17.25 13.5 17.25ZM13.5 17.25C14.0967 17.25 14.669 17.4871 15.091 17.909C15.5129 18.331 15.75 18.9033 15.75 19.5V20.25C15.75 20.6478 15.908 21.0294 16.1893 21.3107C16.4706 21.592 16.8522 21.75 17.25 21.75C17.6478 21.75 18.0294 21.592 18.3107 21.3107C18.592 21.0294 18.75 20.6478 18.75 20.25V0.75H8.25C7.45435 0.75 6.69129 1.06607 6.12868 1.62868C5.56607 2.19129 5.25 2.95435 5.25 3.75V17.25"  fill="white"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8_87">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Orders
+                    </span>                    
+                  </a>
+                </li>
+                <li>
+                  <a href="tables.html" class="nav-link">
+                    <span class="menu-svg whitebg-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3V21M3 9H21" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Tables
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="accounts.html" class="nav-link">
+                    <span class="menu-svg">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <g clip-path="url(#clip0_8_89)">
+                        <path d="M7.5 7.5H7C6.99988 7.5657 7.01272 7.63079 7.03777 7.69153C7.06282 7.75227 7.0996 7.80748 7.146 7.854L7.5 7.5ZM7.5 14C5.77609 14 4.12279 13.3152 2.90381 12.0962C1.68482 10.8772 1 9.22391 1 7.5H0C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15V14ZM14 7.5C14 8.35359 13.8319 9.19883 13.5052 9.98744C13.1786 10.7761 12.6998 11.4926 12.0962 12.0962C11.4926 12.6998 10.7761 13.1786 9.98744 13.5052C9.19883 13.8319 8.35359 14 7.5 14V15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5H14ZM7.5 1C8.35359 1 9.19883 1.16813 9.98744 1.49478C10.7761 1.82144 11.4926 2.30023 12.0962 2.90381C12.6998 3.50739 13.1786 4.22394 13.5052 5.01256C13.8319 5.80117 14 6.64641 14 7.5H15C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0V1ZM7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5H1C1 5.77609 1.68482 4.12279 2.90381 2.90381C4.12279 1.68482 5.77609 1 7.5 1V0ZM7 0V7.5H8V0H7ZM7.724 7.947L13.724 4.947L13.276 4.053L7.276 7.053L7.724 7.947ZM7.146 7.854L12.146 12.854L12.854 12.146L7.854 7.146L7.146 7.854Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8_89">
+                        <rect width="15" height="15" fill="white"/>
+                        </clipPath>
+                        </defs>
+                     </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Accounting
+                    </span>                    
+                  </a>
+                </li>
+                 <li>
+                  <a href="settings.html" class="nav-link">
+                    <span class="menu-svg whitebg-svg">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_8_84)">
+                        <path d="M8 4.754C7.57373 4.754 7.15163 4.83796 6.75781 5.00108C6.36398 5.16421 6.00615 5.40331 5.70473 5.70473C5.40331 6.00615 5.16421 6.36398 5.00109 6.75781C4.83796 7.15163 4.754 7.57373 4.754 8C4.754 8.42627 4.83796 8.84837 5.00109 9.24219C5.16421 9.63601 5.40331 9.99385 5.70473 10.2953C6.00615 10.5967 6.36398 10.8358 6.75781 10.9989C7.15163 11.162 7.57373 11.246 8 11.246C8.86089 11.246 9.68652 10.904 10.2953 10.2953C10.904 9.68652 11.246 8.86089 11.246 8C11.246 7.1391 10.904 6.31347 10.2953 5.70473C9.68652 5.09599 8.86089 4.754 8 4.754ZM5.754 8C5.754 7.40432 5.99063 6.83304 6.41184 6.41184C6.83304 5.99063 7.40432 5.754 8 5.754C8.59567 5.754 9.16695 5.99063 9.58816 6.41184C10.0094 6.83304 10.246 7.40432 10.246 8C10.246 8.59567 10.0094 9.16695 9.58816 9.58816C9.16695 10.0094 8.59567 10.246 8 10.246C7.40432 10.246 6.83304 10.0094 6.41184 9.58816C5.99063 9.16695 5.754 8.59567 5.754 8Z" fill="white"/>
+                        <path d="M9.79599 1.343C9.26899 -0.446996 6.73099 -0.446996 6.20399 1.343L6.10999 1.662C6.07318 1.78696 6.00889 1.90209 5.9218 1.99896C5.83472 2.09584 5.72707 2.17199 5.60673 2.22186C5.48639 2.27172 5.35642 2.29402 5.22634 2.28712C5.09627 2.28023 4.96938 2.24431 4.85499 2.182L4.56299 2.022C2.92299 1.13 1.12999 2.924 2.02299 4.563L2.18199 4.855C2.24429 4.9694 2.28021 5.09628 2.28711 5.22636C2.294 5.35643 2.2717 5.48641 2.22184 5.60674C2.17198 5.72708 2.09582 5.83474 1.99895 5.92182C1.90207 6.0089 1.78694 6.0732 1.66199 6.11L1.34299 6.204C-0.447012 6.731 -0.447012 9.269 1.34299 9.796L1.66199 9.89C1.78694 9.92681 1.90207 9.99111 1.99895 10.0782C2.09582 10.1653 2.17198 10.2729 2.22184 10.3933C2.2717 10.5136 2.294 10.6436 2.28711 10.7736C2.28021 10.9037 2.24429 11.0306 2.18199 11.145L2.02199 11.437C1.12999 13.077 2.92299 14.871 4.56299 13.977L4.85499 13.818C4.96938 13.7557 5.09627 13.7198 5.22634 13.7129C5.35642 13.706 5.48639 13.7283 5.60673 13.7782C5.72707 13.828 5.83472 13.9042 5.9218 14.001C6.00889 14.0979 6.07318 14.2131 6.10999 14.338L6.20399 14.657C6.73099 16.447 9.26899 16.447 9.79599 14.657L9.88999 14.338C9.92679 14.2131 9.99109 14.0979 10.0782 14.001C10.1653 13.9042 10.2729 13.828 10.3932 13.7782C10.5136 13.7283 10.6436 13.706 10.7736 13.7129C10.9037 13.7198 11.0306 13.7557 11.145 13.818L11.437 13.978C13.077 14.871 14.871 13.076 13.977 11.437L13.818 11.145C13.7557 11.0306 13.7198 10.9037 13.7129 10.7736C13.706 10.6436 13.7283 10.5136 13.7781 10.3933C13.828 10.2729 13.9042 10.1653 14.001 10.0782C14.0979 9.99111 14.213 9.92681 14.338 9.89L14.657 9.796C16.447 9.269 16.447 6.731 14.657 6.204L14.338 6.11C14.213 6.0732 14.0979 6.0089 14.001 5.92182C13.9042 5.83474 13.828 5.72708 13.7781 5.60674C13.7283 5.48641 13.706 5.35643 13.7129 5.22636C13.7198 5.09628 13.7557 4.9694 13.818 4.855L13.978 4.563C14.871 2.923 13.076 1.13 11.437 2.023L11.145 2.182C11.0306 2.24431 10.9037 2.28023 10.7736 2.28712C10.6436 2.29402 10.5136 2.27172 10.3932 2.22186C10.2729 2.17199 10.1653 2.09584 10.0782 1.99896C9.99109 1.90209 9.92679 1.78696 9.88999 1.662L9.79599 1.343ZM7.16299 1.626C7.40899 0.791004 8.59099 0.791004 8.83699 1.626L8.93099 1.945C9.01001 2.21309 9.14802 2.46009 9.33491 2.6679C9.5218 2.87571 9.75283 3.03907 10.0111 3.14598C10.2693 3.2529 10.5482 3.30067 10.8273 3.28579C11.1064 3.27092 11.3786 3.19377 11.624 3.06L11.915 2.9C12.679 2.485 13.515 3.32 13.099 4.085L12.94 4.377C12.8064 4.62243 12.7295 4.89463 12.7148 5.17366C12.7 5.45269 12.7479 5.73147 12.8549 5.98959C12.9619 6.2477 13.1253 6.47861 13.3332 6.66538C13.541 6.85215 13.788 6.99006 14.056 7.069L14.374 7.163C15.209 7.409 15.209 8.591 14.374 8.837L14.055 8.931C13.7869 9.01002 13.5399 9.14804 13.3321 9.33493C13.1243 9.52182 12.9609 9.75285 12.854 10.0111C12.7471 10.2693 12.6993 10.5482 12.7142 10.8273C12.7291 11.1064 12.8062 11.3786 12.94 11.624L13.1 11.915C13.515 12.679 12.68 13.515 11.915 13.099L11.624 12.94C11.3785 12.8063 11.1062 12.7291 10.8271 12.7143C10.5479 12.6995 10.269 12.7474 10.0108 12.8544C9.75253 12.9614 9.52151 13.1249 9.33467 13.3328C9.14783 13.5407 9.00989 13.7878 8.93099 14.056L8.83699 14.374C8.59099 15.209 7.40899 15.209 7.16299 14.374L7.06899 14.055C6.98993 13.7871 6.85194 13.5402 6.66512 13.3325C6.4783 13.1248 6.24738 12.9615 5.98928 12.8546C5.73118 12.7477 5.45243 12.6999 5.17346 12.7147C4.89448 12.7294 4.62235 12.8064 4.37699 12.94L4.08499 13.1C3.32099 13.515 2.48499 12.68 2.90099 11.915L3.05999 11.624C3.19394 11.3786 3.27124 11.1062 3.28621 10.827C3.30119 10.5478 3.25346 10.2688 3.14653 10.0104C3.0396 9.75209 2.87618 9.52095 2.66827 9.33399C2.46035 9.14703 2.21321 9.00899 1.94499 8.93L1.62599 8.836C0.790988 8.59 0.790988 7.408 1.62599 7.162L1.94499 7.068C2.21279 6.98891 2.45953 6.85094 2.66713 6.66419C2.87473 6.47744 3.03795 6.24663 3.14484 5.98866C3.25173 5.73069 3.29959 5.45208 3.2849 5.17322C3.27022 4.89437 3.19338 4.62233 3.05999 4.377L2.89999 4.085C2.48499 3.321 3.31999 2.485 4.08499 2.901L4.37699 3.06C4.62235 3.19358 4.89448 3.27058 5.17346 3.28536C5.45243 3.30014 5.73118 3.25232 5.98928 3.14542C6.24738 3.03852 6.4783 2.87523 6.66512 2.66752C6.85194 2.45982 6.98993 2.21295 7.06899 1.945L7.16299 1.626Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8_84">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Settings
+                    </span>
+                    
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            <div class="sidebar-spacer d-md-none" aria-hidden="true"></div>
+            <div class="account">
+              <button class="account-user nav-link mb-0" type="button">
+                <img class="account-avatar img-fluid" src="./assets/images/avtar.jpg" alt="avtar" />
+                <span class="account-meta text-menu nav">
+                  <strong class="account-name">Keyur Patel</strong>
+                  <span class="account-role">Owner</span>
+                </span>
+              </button>
+
+               <a href="login.html" class="nav-link account-logout">
+                    <span class="menu-svg whitebg-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M20 12H10.5M18 15L21 12L18 9M13 7V6C13 5.46957 12.7893 4.96086 12.4142 4.58579C12.0391 4.21071 11.5304 4 11 4H6C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H11C11.5304 20 12.0391 19.7893 12.4142 19.4142C12.7893 19.0391 13 18.5304 13 18V17" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Logout
+                    </span>                    
+                  </a>
+            </div>
+        </aside>
+        <!-- Sidebar end here -->  
+        <!-- Main start here --> 
+         <main class="main" id="main-content">
+              <!-- Topbar -->
+              <header class="topbar mb-md-5">
+                <h1 class="topbar-title">Nice! We have a lot of orders</h1>
+                <h4 class="topbar-meta">
+                  <time datetime="2025-08-27">Wednesday, 27 August 2025</time>                
+                </h4>
+              </header>
+              <section class="dashboard-main-content row">
+                <div class="dashboard-left-section  col-md-9">
+                    <!-- Overview Cards -->
+                    <div class="overview row" aria-label="Overview stats">
+                      <article class="col-md-4 mb-md-0 mb-4">
+                        <div class="card card-primary">
+                          <header class="card-header">
+                            <h4 class="card-title text-white">New Order</h4>
+                            <button class="icon-btn bg-white" aria-label="Notifications">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.985 0C11.074 0 11.956 0.898 11.956 2.006L11.947 2.169C12.815 2.521 13.654 3.105 14.398 3.879C15.26 4.772 15.764 5.956 15.919 7.475V12.953L17.11 15.051C17.51 15.717 17.638 16.275 17.326 16.758C17.04 17.199 16.529 17.353 15.836 17.341H13.166C12.854 18.86 11.532 20 9.95 20C8.368 20 7.045 18.86 6.734 17.342H3.778L3.722 17.339C3.095 17.285 2.628 16.982 2.523 16.399C2.452 16.002 2.546 15.576 2.791 15.068L4.016 12.888L4.019 7.415C4.126 6.205 4.579 5.078 5.367 4.044C6.034 3.169 6.987 2.525 8.021 2.154C8.01717 2.10476 8.01517 2.05539 8.015 2.006C8.015 0.898 8.897 0 9.985 0ZM11.803 17.342H8.097C8.372 18.112 9.097 18.662 9.95 18.662C10.802 18.662 11.528 18.112 11.803 17.342ZM10.082 3.124C8.728 3.124 7.239 3.769 6.405 4.864C5.767 5.7 5.411 6.586 5.33 7.474V13.064C5.33 13.181 5.3 13.296 5.243 13.397L3.952 15.693C3.892 15.8197 3.852 15.9233 3.832 16.004H15.846C15.967 16.006 16.059 16.001 16.122 15.999C16.0795 15.9084 16.0324 15.8199 15.981 15.734L14.694 13.467C14.6371 13.3645 14.6068 13.2493 14.606 13.132L14.609 7.546C14.488 6.384 14.103 5.482 13.46 4.814C12.42 3.734 11.198 3.124 10.082 3.124ZM9.985 1.337C9.83911 1.33801 9.69766 1.38733 9.58278 1.47725C9.46789 1.56717 9.38603 1.69262 9.35 1.834C9.596 1.80267 9.84 1.787 10.082 1.787C10.2593 1.787 10.4377 1.79767 10.617 1.819C10.5783 1.6809 10.4957 1.55916 10.3817 1.4722C10.2677 1.38523 10.1284 1.33777 9.985 1.337Z" fill="white"/>
+                              </svg>
+                            </button>
+                          </header>
+                          <p class="card-value text-white">26</p>
+                          <p class="card-hint text-white mb-0">* Update every new order</p>
+                        </div>
+                      </article>
+
+                      <article class="col-md-4 mb-md-0 mb-4">
+                        <div class="card">
+                          <header class="card-header">
+                            <h4 class="card-title">New Order</h4>
+                            <button class="icon-btn bg--success" aria-label="Reports">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16.755 2H7.245C6.086 2 5.507 2 5.039 2.163C4.59793 2.31972 4.19885 2.57586 3.87267 2.91158C3.54649 3.24731 3.30195 3.6536 3.158 4.099C3 4.581 3 5.177 3 6.37V20.374C3 21.232 3.985 21.688 4.608 21.118C4.78279 20.9565 5.01202 20.8668 5.25 20.8668C5.48798 20.8668 5.71721 20.9565 5.892 21.118L6.375 21.56C6.68121 21.8432 7.08293 22.0004 7.5 22.0004C7.91707 22.0004 8.31879 21.8432 8.625 21.56C8.93121 21.2768 9.33293 21.1196 9.75 21.1196C10.1671 21.1196 10.5688 21.2768 10.875 21.56C11.1812 21.8432 11.5829 22.0004 12 22.0004C12.4171 22.0004 12.8188 21.8432 13.125 21.56C13.4312 21.2768 13.8329 21.1196 14.25 21.1196C14.6671 21.1196 15.0688 21.2768 15.375 21.56C15.6812 21.8432 16.0829 22.0004 16.5 22.0004C16.9171 22.0004 17.3188 21.8432 17.625 21.56L18.108 21.118C18.2828 20.9565 18.512 20.8668 18.75 20.8668C18.988 20.8668 19.2172 20.9565 19.392 21.118C20.015 21.688 21 21.232 21 20.374V6.37C21 5.177 21 4.58 20.842 4.1C20.6982 3.65441 20.4537 3.24792 20.1275 2.91202C19.8013 2.57612 19.4022 2.31982 18.961 2.163C18.493 2 17.914 2 16.755 2Z" stroke="white" stroke-width="1.5"/>
+                                <path d="M9.5 10.4L10.929 12L14.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.5 15.5H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                              </svg>
+                            </button>
+                          </header>
+                          <p class="card-value">26</p>
+                          <p class="card-trend">+2.5% than usual</p>
+                        </div>
+                      </article>
+
+                      <article class="col-md-4 mb-md-0 mb-4">
+                        <div class="card">
+                          <header class="card-header">
+                            <h4 class="card-title">Waiting List</h4>
+                            <button class="icon-btn bg--inprogress" aria-label="Timer">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke="white" stroke-width="2"/>
+                                <path d="M14 2H10M12 2V6M17.5 8L19 6.5M12 11V14H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </button>
+                          </header>
+                          <p class="card-value">9</p>
+                          <p class="card-trend">+3.2% than usual</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="row mt-md-5 mt-4">
+                     <!-- Order List -->
+                      <section class="col-md-6">
+                      <div class="panel" aria-labelledby="orders-heading">
+                        <div class="panel-header">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <h4 id="orders-heading" class="panel-title mb-0">Order List</h4>
+                            <a href="menu.html" class="link-text">View All</a>
+                          </div>
+                          <form role="search" class="search my-md-4">                            
+                            <div class="input-group has-validation">                        
+                            <input type="text" placeholder="Search Order" class="form-control">                     
+                              <span class="input-group-text bg-transparent" id="inputGroupPrepend">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16.893 16.92L19.973 20M19 11.5C19 13.4891 18.2098 15.3968 16.8033 16.8033C15.3968 18.2098 13.4891 19 11.5 19C9.51088 19 7.60322 18.2098 6.1967 16.8033C4.79018 15.3968 4 13.4891 4 11.5C4 9.51088 4.79018 7.60322 6.1967 6.1967C7.60322 4.79018 9.51088 4 11.5 4C13.4891 4 15.3968 4.79018 16.8033 6.1967C18.2098 7.60322 19 9.51088 19 11.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                              </span>
+                            </div>
+                          </form>
+                        </div>
+
+                        <ul class="list list--orders" role="list">
+                          <!-- Item -->
+                          <li class="order border-0">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase">A8</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Matthew Martin</strong>
+                                <span class="order-items">5 Items</span>
+                              </div>
+                            </div>
+                            <div class="order-status">
+                              <div class="badge badge--success">
+                                <span class="badge-icon me-1">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M3.75 15.9375L8.4375 20.625L19.6875 9.375M15 18.75L16.875 20.625L28.125 9.375" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                                <span class="">Ready</span>
+                              </div>
+                              <div class="subtext"><span class="dots bg-success"></span>Ready to serve</div>
+                            </div>
+                          </li>
+                            <!-- Item -->
+                          <li class="order border-0">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase">A7</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Ava Thompson</strong>
+                                <span class="order-items">5 Items</span>
+                              </div>
+                            </div>
+                            <div class="order-status">
+                              <div class="badge badge--progress">
+                                <span class="badge-icon me-1">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                      <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke="white" stroke-width="2"></path>
+                                      <path d="M14 2H10M12 2V6M17.5 8L19 6.5M12 11V14H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </span>
+                                <span class="">Inprogress</span>
+                              </div>
+                              <div class="subtext"><span class="dots bg-inprogress"></span>In the Kitchen</div>
+                            </div>
+                          </li>
+                             <li class="order border-0 order-secondary">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B1</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ethan White</strong>
+                                    <span class="order-items">5 Items</span>
+                                  </div>
+                                </div>
+                                <div class="order-status">
+                                  <div class="badge badge--progress">
+                                    <span class="badge-icon me-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke="white" stroke-width="2"></path>
+                                          <path d="M14 2H10M12 2V6M17.5 8L19 6.5M12 11V14H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </svg>
+                                    </span>
+                                    <span class="">Inprogress</span>
+                                  </div>
+                                  <div class="subtext"><span class="dots bg-inprogress"></span>In the Kitchen</div>
+                                </div>
+                          </li>
+                            <li class="order border-0 order-secondary">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B5</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ava Thompson</strong>
+                                    <span class="order-items">5 Items</span>
+                                  </div>
+                                </div>
+                                <div class="order-status">
+                                  <div class="badge badge--progress">
+                                    <span class="badge-icon me-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke="white" stroke-width="2"></path>
+                                          <path d="M14 2H10M12 2V6M17.5 8L19 6.5M12 11V14H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </svg>
+                                    </span>
+                                    <span class="">Inprogress</span>
+                                  </div>
+                                  <div class="subtext"><span class="dots bg-inprogress"></span>In the Kitchen</div>
+                                </div>
+                          </li>
+
+                            <li class="order border-0 order-secondary">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B8</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ava Thompson</strong>
+                                    <span class="order-items">5 Items</span>
+                                  </div>
+                                </div>
+                                <div class="order-status">
+                                  <div class="badge badge--progress">
+                                    <span class="badge-icon me-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 22C16.4183 22 20 18.4183 20 14C20 9.58172 16.4183 6 12 6C7.58172 6 4 9.58172 4 14C4 18.4183 7.58172 22 12 22Z" stroke="white" stroke-width="2"></path>
+                                          <path d="M14 2H10M12 2V6M17.5 8L19 6.5M12 11V14H9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                      </svg>
+                                    </span>
+                                    <span class="">Inprogress</span>
+                                  </div>
+                                  <div class="subtext"><span class="dots bg-inprogress"></span>In the Kitchen</div>
+                                </div>
+                          </li>
+                            <li class="order border-0 order-completed">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B8</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ava Thompson</strong>
+                                    <span class="order-items">5 Items</span>
+                                  </div>
+                                </div>
+                                <div class="order-status">
+                                  <div class="badge badge--completed">
+                                    <span class="badge-icon me-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M16.755 2H7.245C6.086 2 5.507 2 5.039 2.163C4.59793 2.31972 4.19885 2.57586 3.87267 2.91158C3.54649 3.24731 3.30195 3.6536 3.158 4.099C3 4.581 3 5.177 3 6.37V20.374C3 21.232 3.985 21.688 4.608 21.118C4.78279 20.9565 5.01202 20.8668 5.25 20.8668C5.48798 20.8668 5.71721 20.9565 5.892 21.118L6.375 21.56C6.68121 21.8432 7.08293 22.0004 7.5 22.0004C7.91707 22.0004 8.31879 21.8432 8.625 21.56C8.93121 21.2768 9.33293 21.1196 9.75 21.1196C10.1671 21.1196 10.5688 21.2768 10.875 21.56C11.1812 21.8432 11.5829 22.0004 12 22.0004C12.4171 22.0004 12.8188 21.8432 13.125 21.56C13.4312 21.2768 13.8329 21.1196 14.25 21.1196C14.6671 21.1196 15.0688 21.2768 15.375 21.56C15.6812 21.8432 16.0829 22.0004 16.5 22.0004C16.9171 22.0004 17.3188 21.8432 17.625 21.56L18.108 21.118C18.2828 20.9565 18.512 20.8668 18.75 20.8668C18.988 20.8668 19.2172 20.9565 19.392 21.118C20.015 21.688 21 21.232 21 20.374V6.37C21 5.177 21 4.58 20.842 4.1C20.6982 3.65441 20.4537 3.24792 20.1275 2.91202C19.8013 2.57612 19.4022 2.31982 18.961 2.163C18.493 2 17.914 2 16.755 2Z" stroke="white" stroke-width="1.5"/>
+                                        <path d="M9.5 10.4L10.929 12L14.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 15.5H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                      </svg>
+                                    </span>
+                                    <span class="">Completed</span>
+                                  </div>
+                                  <div class="subtext"><span class="dots bg-completed"></span>Waiting for the payment</div>
+                                </div>
+                          </li>
+                          <!-- More orders ... -->
+                        </ul>
+                      
+                        </div>
+                      </section>
+                       <!-- Payment -->
+                     <section class="col-md-6">
+                      <div class="panel" aria-labelledby="orders-heading">
+                        <div class="panel-header">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <h4 id="orders-heading" class="panel-title mb-0">Payment</h4>
+                            <a href="#" class="link-text d-none">View All</a>
+                          </div>
+                          <form role="search" class="search my-md-4">                            
+                            <div class="input-group has-validation">                        
+                            <input type="text" placeholder="Search Order" class="form-control">                     
+                              <span class="input-group-text bg-transparent" id="inputGroupPrepend">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16.893 16.92L19.973 20M19 11.5C19 13.4891 18.2098 15.3968 16.8033 16.8033C15.3968 18.2098 13.4891 19 11.5 19C9.51088 19 7.60322 18.2098 6.1967 16.8033C4.79018 15.3968 4 13.4891 4 11.5C4 9.51088 4.79018 7.60322 6.1967 6.1967C7.60322 4.79018 9.51088 4 11.5 4C13.4891 4 15.3968 4.79018 16.8033 6.1967C18.2098 7.60322 19 9.51088 19 11.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                              </span>
+                            </div>
+                          </form>
+                        </div>
+
+                        <ul class="list list--orders" role="list">
+                          <!-- Item -->
+                          <li class="order border-0">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase">A1</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Matthew Martin</strong>
+                                <span class="order-items">Order ID: #123</span>
+                              </div>
+                            </div>
+                            <div class="order-status">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                            <!-- Item -->
+                          <li class="order border-0">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase">A2</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Ava Thompson</strong>
+                                <span class="order-items">Order ID: #124</span>
+                              </div>
+                            </div>
+                            <div class="order-status">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                             <li class="order border-0">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">a3</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ethan White</strong>
+                                    <span class="order-items">Order ID: #125</span>
+                                  </div>
+                                </div>
+                              <div class="order-status">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                            <li class="order border-0">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B1</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ava Thompson</strong>
+                                    <span class="order-items">Order ID: #126</span>
+                                  </div>
+                                </div>
+                               <div class="order-status">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+
+                            <li class="order border-0">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B2</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ava Thompson</strong>
+                                    <span class="order-items">Order ID: #127</span>
+                                  </div>
+                                </div>
+                                <div class="order-status">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                            <li class="order border-0">
+                                <div class="order-no-title d-flex align-items-center">
+                                  <span class="order-token token token-brown text-uppercase">B3</span>
+                                  <div class="order-meta">
+                                    <strong class="order-name">Ava Thompson</strong>
+                                    <span class="order-items">Order ID: #128</span>
+                                  </div>
+                                </div>
+                               <div class="order-status">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                          
+                          <!-- More orders ... -->
+                        </ul>
+                        </div>
+                      </section>
+                </div>
+                </div>
+                <div class="dashboard-right-section col-md-3">
+                  <button class="btn btn-custom w-100 text-uppercase"  type="button" data-bs-toggle="modal" data-bs-target="#CreateOrderModal">
+                    <span aria-hidden="true">＋</span> Create New Order
+                  </button>
+                  <section class="popular-dishes mt-md-4">
+                      <div class="panel" aria-labelledby="orders-heading">
+                          <div class="panel-header">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <h4 id="orders-heading" class="panel-title mb-0">Popular Dishes</h4>
+                              <a href="#" class="link-text">View All</a>
+                            </div>
+                            <form role="search" class="search my-md-4 d-none">                            
+                              <div class="input-group has-validation">                        
+                              <input type="text" placeholder="Search Order" class="form-control">                     
+                                <span class="input-group-text bg-transparent" id="inputGroupPrepend">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                      <path d="M16.893 16.92L19.973 20M19 11.5C19 13.4891 18.2098 15.3968 16.8033 16.8033C15.3968 18.2098 13.4891 19 11.5 19C9.51088 19 7.60322 18.2098 6.1967 16.8033C4.79018 15.3968 4 13.4891 4 11.5C4 9.51088 4.79018 7.60322 6.1967 6.1967C7.60322 4.79018 9.51088 4 11.5 4C13.4891 4 15.3968 4.79018 16.8033 6.1967C18.2098 7.60322 19 9.51088 19 11.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                              </div>
+                            </form>
+                          </div>
+                            <ul class="list list--orders" role="list">
+                          <!-- Item -->                          
+                          <li class="order align-items-center justify-content-start">
+                            <h5 class="order-ranked text-uppercase me-3 mb-0">01</h5>
+                            <div class="dish-detail d-flex align-items-center">
+                              <img class="account-avatar img-fluid " src="./assets/images/schezwan-noodles.jpg" alt="" />
+                              <div class="order-meta">
+                                <strong class="order-name">Schezwam Noodles</strong>
+                                <span class="order-items paragraph-text">Order: <span class="primary-text">15</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                             <!-- Item -->                          
+                          <li class="order align-items-center  justify-content-start">
+                            <h5 class="order-ranked text-uppercase me-3 mb-0">02</h5>
+                            <div class="dish-detail d-flex align-items-center">
+                              <img class="account-avatar img-fluid" src="./assets/images/dal-makhani.jpg" alt="" />
+                              <div class="order-meta">
+                                <strong class="order-name">Dal Makhani</strong>
+                                <span class="order-items paragraph-text">Order: <span class="primary-text">15</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                            <li class="order align-items-center  justify-content-start">
+                            <h5 class="order-ranked text-uppercase me-3 mb-0">03</h5>
+                            <div class="dish-detail d-flex align-items-center">
+                              <img class="account-avatar img-fluid" src="./assets/images/masala-dhosa.jpg" alt="" />
+                              <div class="order-meta">
+                                <strong class="order-name">Masala Dosa</strong>
+                                <span class="order-items paragraph-text">Order: <span class="primary-text">17</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                            <li class="order align-items-center  justify-content-start border-0">
+                            <h5 class="order-ranked text-uppercase me-3 mb-0">04</h5>
+                            <div class="dish-detail d-flex align-items-center">
+                              <img class="account-avatar img-fluid" src="./assets/images/kathiyawadi-thali.jpg" alt="" />
+                              <div class="order-meta">
+                                <strong class="order-name">Kathiyawadi Thali</strong>
+                                <span class="order-items paragraph-text">Order: <span class="primary-text">19</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                         
+                          <!-- More orders ... -->
+                        </ul>
+                        </div>
+                  </section> 
+                  <section class="out-of-stock mt-md-4">
+                      <div class="panel" aria-labelledby="orders-heading">
+                        <div class="panel-header">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <h4 id="orders-heading" class="panel-title mb-0">Out of Stock</h4>
+                            <a href="#" class="link-text">View All</a>
+                          </div>
+                          <form role="search" class="search my-md-4 d-none">                            
+                            <div class="input-group has-validation">                        
+                            <input type="text" placeholder="Search Order" class="form-control">                     
+                              <span class="input-group-text bg-transparent" id="inputGroupPrepend">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16.893 16.92L19.973 20M19 11.5C19 13.4891 18.2098 15.3968 16.8033 16.8033C15.3968 18.2098 13.4891 19 11.5 19C9.51088 19 7.60322 18.2098 6.1967 16.8033C4.79018 15.3968 4 13.4891 4 11.5C4 9.51088 4.79018 7.60322 6.1967 6.1967C7.60322 4.79018 9.51088 4 11.5 4C13.4891 4 15.3968 4.79018 16.8033 6.1967C18.2098 7.60322 19 9.51088 19 11.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                              </span>
+                            </div>
+                          </form>
+                        </div>
+
+                        <ul class="list list--orders" role="list">
+                          <!-- Item -->
+                          <li class="order">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase d-none">A1</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Ringan Bataka Nu Shaak</strong>
+                                <span class="order-items paragraph-text">Available: <span class="primary-text">04:00 PM</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                              <li class="order">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase d-none">A1</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Veggie Pizza Supreme</strong>
+                                <span class="order-items paragraph-text">Available: <span class="primary-text">08:00 PM</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                                <li class="order">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase d-none">A1</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Aloo Paratha with Curd</strong>
+                                <span class="order-items paragraph-text">Available: <span class="primary-text">06:00 PM</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                            <li class="order border-0 pb-0">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase d-none">A1</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Aloo Paratha with Curd</strong>
+                                <span class="order-items paragraph-text">Available: <span class="primary-text">10:00 PM</span></span>
+                              </div>
+                            </div>
+                            <div class="order-status d-none">
+                              <button class="btn btn-custom">Pay Now 
+                                <span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                                </span>
+                              </button>
+                            </div>
+                          </li>
+                        
+                          
+                          <!-- More orders ... -->
+                        </ul>
+                        </div>
+                      </section>
+                </div>
+                
+              </section>            
+              <footer class="dashboard-footer text-center py-3">
+                <p class="mb-0">
+                  &copy; 2025 <strong>Keju Patel </strong>. All rights reserved.
+                </p>
+                <small class="text-muted">
+                  Dashboard UI designed & developed by Pranamai IT.
+                </small>
+              </footer>
+            </main>
+         <!-- Main end here --> 
+           
+    </div>
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="CreateOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="exampleModalLabel">Create New Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.79303 6.79301C6.98056 6.60553 7.23487 6.50022 7.50003 6.50022C7.76519 6.50022 8.0195 6.60553 8.20703 6.79301L12 10.586L15.793 6.79301C15.8853 6.69749 15.9956 6.62131 16.1176 6.5689C16.2396 6.51649 16.3709 6.48891 16.5036 6.48775C16.6364 6.4866 16.7681 6.5119 16.891 6.56218C17.0139 6.61246 17.1255 6.68672 17.2194 6.78061C17.3133 6.8745 17.3876 6.98615 17.4379 7.10905C17.4881 7.23195 17.5134 7.36363 17.5123 7.49641C17.5111 7.62919 17.4835 7.76041 17.4311 7.88241C17.3787 8.00441 17.3025 8.11476 17.207 8.207L13.414 12L17.207 15.793C17.3892 15.9816 17.49 16.2342 17.4877 16.4964C17.4854 16.7586 17.3803 17.0094 17.1948 17.1948C17.0094 17.3802 16.7586 17.4854 16.4964 17.4877C16.2342 17.49 15.9816 17.3892 15.793 17.207L12 13.414L8.20703 17.207C8.01843 17.3892 7.76583 17.49 7.50363 17.4877C7.24143 17.4854 6.99062 17.3802 6.80521 17.1948C6.6198 17.0094 6.51463 16.7586 6.51236 16.4964C6.51008 16.2342 6.61087 15.9816 6.79303 15.793L10.586 12L6.79303 8.207C6.60556 8.01948 6.50024 7.76517 6.50024 7.5C6.50024 7.23484 6.60556 6.98053 6.79303 6.79301Z" fill="white"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Bootstrap Tabs -->
+          <ul class="nav nav-pills mb-3 d-flex flex-wrap" id="pills-tab" role="tablist">
+            <li class="nav-item w-50  me-0 pe-2" role="presentation">
+              <button class="nav-link w-100 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dine In</button>
+            </li>
+            <li class="nav-item w-50" role="presentation">
+              <button class="nav-link w-100" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Takeaway</button>
+            </li>            
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <form class="row g-3 needs-validation my-4" id="NewOrderForm" novalidate>
+                    <div class="col-md-12">
+                        <label for="validationCustom01" class="form-label">Customer Name <span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Customer Name" class="form-control" id="validationCustom01" required>                     
+                    </div>   
+                      <div class="col-md-12">                         
+                        <label for="validationCustom01" class="form-label">Guest <span class="text-danger d-none">*</span></label>
+                        <div class="input-group has-validation">  
+                          <div class="form-control position-relative d-flex justify-content-between">
+                            <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                  </svg>
+                            </button>
+                            <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                            <button type="button" class="input-group-button" id="IncrementBTN">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                </svg>
+                            </button>
+                          </div>                      
+                        
+                        
+                        </div>
+                    </div> 
+                      <div class="col-md-12">                         
+                        <label for="validationCustom01" class="form-label">Choose Table <span class="text-danger">*</span></label>
+                        <select class="form-select form-control" id="validationCustom04" required>
+                        <option  value="">A1</option>
+                        <option>B1</option>
+                        </select>
+                    </div>                    
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-custom mt-3 w-100" type="submit">Login</button>
+                    </div>
+                    </form>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              Tab2 Content
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Custom JS -->
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>

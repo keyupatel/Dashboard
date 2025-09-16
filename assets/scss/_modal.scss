@@ -1,0 +1,56 @@
+@use "var" as *;
+@use "mixins" as *;
+.modal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header {
+                padding: 1.25rem;
+                .btn-close {
+                    border: 1px solid $border-color;
+                    border-radius: $full-radius;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    background-image: none !important;
+                    @include flex-center;
+                    &:focus{
+                        box-shadow: none !important;
+                    }
+                  
+                    svg{
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        path{
+                            fill: $Secondary-heading-text-color;
+                        }
+                    }
+                      &:hover{
+                        opacity: 1;
+                        background-color: $primary-color;
+                        color: $white-color;
+                        color: $white-color;
+                        svg{
+                            path{
+                                fill: $white-color;
+                            }
+                        }   
+                    }
+                }
+            }
+            .modal-body{
+                padding: 1.25rem;
+                #pills-tab{
+                    background-color:$border-color;
+                    border-radius: $radius-15;
+                    padding: 1rem;
+                    .nav-item{
+                        .nav-link{}
+                    }
+
+                }
+            }
+            .modal-footer{
+                padding: 1.25rem;
+            }
+        }
+    }
+}

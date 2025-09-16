@@ -1,0 +1,164 @@
+@use "_var.scss" as *;
+@use "_mixins.scss" as *;
+
+
+.dashboard-main-content{
+    justify-content: space-between;
+    .dashboard-left-section{
+        // max-width: calc(100% - 25rem);
+        // width: 100%;
+    }
+    .dashboard-right-section{
+        // max-width: 23rem;
+        // width: 100%;
+        // margin-left: 1.5rem;
+    }
+    .card-primary{
+        background-color: $primary-color;
+        color: $white-color;
+    }
+    .card{
+        .card-header {
+            @include flex-center;
+            justify-content: space-between;
+            .icon-btn {
+                height: 4rem;
+                width: 4rem;
+                border: none;
+                border-radius: $radius-15;
+                @include flex-center;
+                pointer-events: none;
+                svg{
+                    height: 1.9rem;
+                    width: 1.9rem;                    
+                }
+            }
+            .icon-btn.bg-white{
+                svg{
+                    transform: rotate(-15deg);
+                    path{
+                        fill: $primary-color;
+                    }
+                }
+            }
+            .icon-btn.bg--success{
+                svg{
+                    path{
+                        background-color: $white-color;
+                        stroke: $status-available;
+                    }
+                }
+            }
+             .icon-btn.bg--inprogress{
+                svg{
+                    path{
+                        stroke: $secondary-color;
+                    }
+                }
+            }
+           
+        }
+        .card-value{
+            font-size: 2.5rem;
+            color: $primary-color;
+            font-weight: $semibold;
+        }
+        .card-trend{
+            color: $heading-text-color;
+            font-weight: $medium;
+            margin-bottom: 0;
+        }
+    }
+.list--orders{
+    .order{
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid $border-color;
+        display: flex;
+        justify-content: space-between;
+        .order-token{
+            padding: 1rem;
+            @include flex-center;
+            background-color: $primary-color;
+            color: $white-color;
+            font-weight: $semibold;
+            font-size: 1.5rem;
+            border-radius: $radius-15;
+            margin-right: 1rem;
+            min-width: 4rem;
+            height: 4rem;
+
+        }
+        .order-meta{
+            .order-name{
+                font-weight: $medium !important;
+                font-size: 1.25rem;
+            }
+            .order-items{
+                color: $Secondary-heading-text-color;
+                font-size: 1rem;
+                display:block;
+
+            }           
+        }
+         .order-status{
+            display: block;
+            .badge{
+                @include flex-center;
+                border-radius: 2rem;
+                padding: 0.7rem 1rem;
+                font-size: 1rem;               
+            }
+            .badge--success{
+                background-color: rgba($status-available, .2);
+                color: $status-available;
+            }
+            .badge--progress{
+                background-color: rgba($status-inprogress, .2);
+                color: $primary-color;
+                svg{
+                    path{
+                        stroke: $primary-color;
+                    }
+                }
+            }
+             .badge--completed{
+                background-color: rgba($status-completed, .1);
+                color: $status-completed;
+                svg{
+                    path{
+                        stroke: $status-completed;
+                    }
+                }
+            }
+            .subtext{
+                color:$paragraph-text-color;
+                margin-top: 0.4rem;
+                @include flex-center;
+                .dots{
+                    height: 1rem;
+                    width: 1rem;
+                    border-radius: 100%;
+                    @include flex-center;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .order-ranked{
+            font-weight: $semibold;
+            color: $Secondary-heading-text-color;
+        }
+    }
+        .order-secondary {
+            .order-token{
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+     
+    }
+}
+
+}

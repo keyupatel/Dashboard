@@ -1,0 +1,1684 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Restaurant Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-app menu-page">
+       <!-- Sidebar start here -->  
+     
+        <!-- Sidebar end here -->  
+        <!-- Main start here --> 
+         <main class="main" id="main-content">
+              <!-- Topbar -->
+              <header class="topbar mb-md-5">              
+              <h1 class="topbar-title d-flex align-items-center">
+                <a href="index.html" class="choose-menu me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                      <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                 
+                  </a> Choose Menu</h1>
+                 <form role="search" class="search my-md-0">                            
+                  <div class="input-group has-validation">                        
+                  <input type="text" placeholder="Search Dishes" class="form-control bg-white" id="searchproduct" name="search">                     
+                    <span class="input-group-text bg-white" id="inputGroupPrepend">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M16.893 16.92L19.973 20M19 11.5C19 13.4891 18.2098 15.3968 16.8033 16.8033C15.3968 18.2098 13.4891 19 11.5 19C9.51088 19 7.60322 18.2098 6.1967 16.8033C4.79018 15.3968 4 13.4891 4 11.5C4 9.51088 4.79018 7.60322 6.1967 6.1967C7.60322 4.79018 9.51088 4 11.5 4C13.4891 4 15.3968 4.79018 16.8033 6.1967C18.2098 7.60322 19 9.51088 19 11.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                  </div>
+                </form>
+              </header>
+              <section class="dashboard-main-content row">
+                <div class="dashboard-left-section  col-md-12">
+                   <div class="row">
+                        <div class="col-xl-3">
+                          <!-- Bootstrap Tabs -->
+                          <ul class="nav nav-pills mb-0" id="pills-tab" role="tablist">
+                            <li class="nav-item d-block w-100 mb-4" role="presentation">
+                              <button class="nav-link w-100 text-start active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Menu-All" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <h4 class="mb-4"> All Menu</h4>
+                                <h6 class="mb-0">150 Item</h6>
+                              </button>
+                            </li>
+                            <li class="nav-item d-block w-100" role="presentation">
+                              <button class="nav-link w-100 text-start"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Menu-Breakfast" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <h4 class="mb-4"> Breakfast</h4>
+                                <h6 class="mb-0">15 Item</h6>
+                              </button>
+                            </li>
+                             <li class="nav-item d-block w-100" role="presentation">
+                              <button class="nav-link w-100 text-start"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Menu-fastfood" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <h4 class="mb-4"> Snacks</h4>
+                                <h6 class="mb-0">10 Item</h6>
+                              </button>
+                            </li>
+                             <li class="nav-item d-block w-100" role="presentation">
+                              <button class="nav-link w-100 text-start"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Menu-Soups" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <h4 class="mb-4"> Soups</h4>
+                                <h6 class="mb-0">8 Item</h6>
+                              </button>
+                            </li>
+                            <li class="nav-item d-block w-100" role="presentation">
+                              <button class="nav-link w-100 text-start"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Menu-Pasta" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <h4 class="mb-4"> Pasta</h4>
+                                <h6 class="mb-0">7 Item</h6>
+                              </button>
+                            </li>
+                             <li class="nav-item d-block w-100" role="presentation">
+                              <button class="nav-link w-100 text-start"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Menu-Snacks" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <h4 class="mb-4"> Fastfood</h4>
+                                <h6 class="mb-0">11 Item</h6>
+                              </button>
+                            </li>
+                            
+                            
+                                       
+                          </ul>
+                        </div>
+                        <div class="col-xl-9">
+                          <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="Menu-All" role="tabpanel" aria-labelledby="pills-home-tab">
+                             <div class="row">
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/masala-dhosa.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Panner Butter Masala Dhosa</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Veggie Pizza Supreme.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Veggie Pizza Supreme</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/schezwan-noodles.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                     Disc 12%
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Schezwan Noodles</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/kathiyawadi-thali.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Kathiyawadi Thali</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Aloo Paratha with Curd.jpeg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                       Disc 20% 
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Aloo Paratha with Curd</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Thai Green Curry.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Thai Green Curry</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             </div>
+                            </div>
+                            <div class="tab-pane fade" id="Menu-Breakfast" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="row">
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Toast with Butter.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Toast with Butter</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Wraps.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Wraps / Rolls</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Coffee.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Cappuccino Coffee</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Croissant Pastry.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Disc 10%
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Croissant Pastry</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Waffles.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Disc 18%
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Waffles with Chocolate</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Greek Yogurt.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Greek Yogurt with Honey</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             </div>
+                            </div>
+                             <div class="tab-pane fade" id="Menu-fastfood" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="row">
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/khaman.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Naylon Khaman</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/fafda.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Fafda–Jalebi</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Cheese-Vada-Pav.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Cheese Buter Vadapav</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/karela-thepla-paratha.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Karela Thepla </h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/anguri.avif" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Cheese Super Delux Anguri</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Mumbai-BhelPuri-02.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Disc 10%
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Mumbai Bhelpuri</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             </div>
+                            </div>
+                           <div class="tab-pane fade" id="Menu-Soups" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/chiken-noodles.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Chicken Noodle Soup</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Bo-Kho-Vietnamese-Beef-Stew.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Disc 5%
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Beef Stew Soup</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Broccoli-Cheddar-Soup-Recipe-1-of-1-2.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Broccoli Cheddar Soup</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Corn.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Corn Chowder</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Lamb.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Dahi Akhni</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/akni.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Chicken Soup</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             </div>
+                            </div>
+                            <div class="tab-pane fade" id="Menu-Pasta" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Creamy-Roasted-Garlic-Rigatoni-2-2.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Cream Rosted Pasta</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Macaroni.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Macaroni Pasta</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/mashroom.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Pappardelle Pasta</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Tortellini_Bolognesi.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Tortellini Pasta</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/lasagna-bolognese.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Lasagna Pasta</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/cass.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Cavatappi Pasta</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             </div>
+                            </div>
+                             <div class="tab-pane fade" id="Menu-Snacks" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Veg-Chowmein.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Chow Mein</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/crepsy.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Crispy Fried Wontons</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Kung Pao Chicken.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--disc">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Disc 20%
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Kung Pao Chicken</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Chili Chicken.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Chili Chicken</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/Schezwan Fried Rice.jpg" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>Schezwan Fried Rice</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xl-4 col-md-6 col-12">
+                                <div class="card card-menu mb-md-4 mb-3">
+                                  <div class="card-top-img">
+                                    <img src="./assets/images/General Tso’s Chicken.webp" alt="masala-dhosa" class="img-fluid" />
+                                    <div class="badge badge--success d-none">
+                                      <span class="pe-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                          <path d="M12 17.27L16.15 19.78C16.91 20.24 17.84 19.56 17.64 18.7L16.54 13.98L20.21 10.8C20.88 10.22 20.52 9.12001 19.64 9.05001L14.81 8.64001L12.92 4.18001C12.58 3.37001 11.42 3.37001 11.08 4.18001L9.19001 8.63001L4.36001 9.04001C3.48001 9.11001 3.12001 10.21 3.79001 10.79L7.46001 13.97L6.36001 18.69C6.16001 19.55 7.09001 20.23 7.85001 19.77L12 17.27Z" fill="white"/>
+                                          </svg>
+                                      </span>
+                                      Popular
+                                    </div>
+                                  </div>
+                                  <div class="card-menu-content mt-3">
+                                    <h5>General Tso’s Chicken</h5>
+                                    <p>A crispy South Indian dosa filled with rich and creamy paneer butter masala.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div class="menu-price">
+                                        <h4 class="fw-medium d-flex mb-0"><small class="pe-1">$</small>12.00</h4>
+                                       </div>
+                                        <div class="position-relative d-flex justify-content-between border-0 w-50 align-items-center">
+                                          <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                                </svg>
+                                          </button>
+                                          <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                                          <button type="button" class="input-group-button" id="IncrementBTN">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                              </svg>
+                                          </button>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                             </div>
+                            </div>
+                             
+                          </div>
+                        </div>
+                       
+                    </section>            
+              <footer class="dashboard-footer text-center py-3">
+                <p class="mb-0">
+                  &copy; 2025 <strong>Keju Patel </strong>. All rights reserved.
+                </p>
+                <small class="text-muted">
+                  Dashboard UI designed & developed by Pranamai IT.
+                </small>
+              </footer>
+            </main>
+         <!-- Main end here --> 
+             <aside class="sidebar dashboard-main-content" id="Sidebar" aria-label="primary">
+                <ul class="list list--orders" role="list">
+                          <!-- Item -->
+                          <li class="order border-0 flex-wrap pb-0">
+                            <div class="order-no-title d-flex align-items-center">
+                              <span class="order-token token token-brown text-uppercase">A1</span>
+                              <div class="order-meta">
+                                <strong class="order-name">Matthew Martin</strong>
+                                <span class="order-items">5 Items</span>
+                              </div>
+                            </div>
+                            <div class="order-status">
+                              <div class="badge badge--success">
+                                <span class="badge-icon me-1">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M3.75 15.9375L8.4375 20.625L19.6875 9.375M15 18.75L16.875 20.625L28.125 9.375" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </span>
+                                <span class="">Ready</span>
+                              </div>
+                              <div class="subtext"><span class="dots bg-success"></span>Ready to serve</div>
+                            </div>
+                            <div class="date-time w-100 d-flex align-items-center justify-content-between flex-wrap  mt-3 pb-3 border-bottom-1">
+                              <p class="mb-0 text-small-color">Friday, 12, 2025</p>
+                              <p class="mb-0  text-small-color">06:12AM</p>
+                            </div>
+                             <div class="order-details mt-md-4 mt-3 w-100">
+                              <h4 class="mb-md-4 mb-3"> Order Details</h4>
+                              <div class="order-items border-bottom-1 pb-4 mb-4">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="mb-0">Panner Butter Masala</h6>
+                                <h6 class="mb-0">x1</h6>
+                              </div>
+                              <div class="description-order">
+                                <p class="mb-0"><small> Extra: Double Cheese </small></p>
+                                <p class="mb-0"><small> Notes: Make the Dish a bit spicy </small></p>
+                              </div>
+                               <div class="d-flex align-items-center justify-content-between mt-3">
+                                <div class="badge badge--success">
+                                <span class="badge-icon me-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16.755 2H7.245C6.086 2 5.507 2 5.039 2.163C4.59793 2.31972 4.19885 2.57586 3.87267 2.91158C3.54649 3.24731 3.30195 3.6536 3.158 4.099C3 4.581 3 5.177 3 6.37V20.374C3 21.232 3.985 21.688 4.608 21.118C4.78279 20.9565 5.01202 20.8668 5.25 20.8668C5.48798 20.8668 5.71721 20.9565 5.892 21.118L6.375 21.56C6.68121 21.8432 7.08293 22.0004 7.5 22.0004C7.91707 22.0004 8.31879 21.8432 8.625 21.56C8.93121 21.2768 9.33293 21.1196 9.75 21.1196C10.1671 21.1196 10.5688 21.2768 10.875 21.56C11.1812 21.8432 11.5829 22.0004 12 22.0004C12.4171 22.0004 12.8188 21.8432 13.125 21.56C13.4312 21.2768 13.8329 21.1196 14.25 21.1196C14.6671 21.1196 15.0688 21.2768 15.375 21.56C15.6812 21.8432 16.0829 22.0004 16.5 22.0004C16.9171 22.0004 17.3188 21.8432 17.625 21.56L18.108 21.118C18.2828 20.9565 18.512 20.8668 18.75 20.8668C18.988 20.8668 19.2172 20.9565 19.392 21.118C20.015 21.688 21 21.232 21 20.374V6.37C21 5.177 21 4.58 20.842 4.1C20.6982 3.65441 20.4537 3.24792 20.1275 2.91202C19.8013 2.57612 19.4022 2.31982 18.961 2.163C18.493 2 17.914 2 16.755 2Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M9.5 10.4L10.929 12L14.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.5 15.5H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                  </svg>
+                                </span>
+                                <span class="">Notes</span>
+                              </div>
+                                <h6 class="mb-0">$16.00</h6>
+                              </div>
+                              </div>
+                              <div class="order-items border-bottom-1 pb-3 mb-4">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="mb-0">Daal Makhani</h6>
+                                <h6 class="mb-0">x2</h6>
+                              </div>
+                              <div class="description-order">                                
+                                <p class="mb-0"><small> Notes: Make the Dish not spicy </small></p>
+                              </div>
+                               <div class="d-flex align-items-center justify-content-between mt-3">
+                                <div class="badge badge--success">
+                                <span class="badge-icon me-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16.755 2H7.245C6.086 2 5.507 2 5.039 2.163C4.59793 2.31972 4.19885 2.57586 3.87267 2.91158C3.54649 3.24731 3.30195 3.6536 3.158 4.099C3 4.581 3 5.177 3 6.37V20.374C3 21.232 3.985 21.688 4.608 21.118C4.78279 20.9565 5.01202 20.8668 5.25 20.8668C5.48798 20.8668 5.71721 20.9565 5.892 21.118L6.375 21.56C6.68121 21.8432 7.08293 22.0004 7.5 22.0004C7.91707 22.0004 8.31879 21.8432 8.625 21.56C8.93121 21.2768 9.33293 21.1196 9.75 21.1196C10.1671 21.1196 10.5688 21.2768 10.875 21.56C11.1812 21.8432 11.5829 22.0004 12 22.0004C12.4171 22.0004 12.8188 21.8432 13.125 21.56C13.4312 21.2768 13.8329 21.1196 14.25 21.1196C14.6671 21.1196 15.0688 21.2768 15.375 21.56C15.6812 21.8432 16.0829 22.0004 16.5 22.0004C16.9171 22.0004 17.3188 21.8432 17.625 21.56L18.108 21.118C18.2828 20.9565 18.512 20.8668 18.75 20.8668C18.988 20.8668 19.2172 20.9565 19.392 21.118C20.015 21.688 21 21.232 21 20.374V6.37C21 5.177 21 4.58 20.842 4.1C20.6982 3.65441 20.4537 3.24792 20.1275 2.91202C19.8013 2.57612 19.4022 2.31982 18.961 2.163C18.493 2 17.914 2 16.755 2Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M9.5 10.4L10.929 12L14.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.5 15.5H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                  </svg>
+                                </span>
+                                <span class="">Notes</span>
+                              </div>
+                                <h6 class="mb-0">$25.50</h6>
+                              </div>
+                              </div>
+                               <div class="order-items border-bottom-1 pb-3 mb-4">
+                                  <div class="d-flex align-items-center justify-content-between">
+                                <h6 class="mb-0">Kathiyawadi Thali</h6>
+                                <h6 class="mb-0">x2</h6>
+                              </div>
+                              <div class="description-order">                                
+                                <p class="mb-0"><small> Notes: Make the Dish a bit spicy </small></p>
+                              </div>
+                               <div class="d-flex align-items-center justify-content-between mt-3">
+                                <div class="badge badge--success">
+                                <span class="badge-icon me-2">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M16.755 2H7.245C6.086 2 5.507 2 5.039 2.163C4.59793 2.31972 4.19885 2.57586 3.87267 2.91158C3.54649 3.24731 3.30195 3.6536 3.158 4.099C3 4.581 3 5.177 3 6.37V20.374C3 21.232 3.985 21.688 4.608 21.118C4.78279 20.9565 5.01202 20.8668 5.25 20.8668C5.48798 20.8668 5.71721 20.9565 5.892 21.118L6.375 21.56C6.68121 21.8432 7.08293 22.0004 7.5 22.0004C7.91707 22.0004 8.31879 21.8432 8.625 21.56C8.93121 21.2768 9.33293 21.1196 9.75 21.1196C10.1671 21.1196 10.5688 21.2768 10.875 21.56C11.1812 21.8432 11.5829 22.0004 12 22.0004C12.4171 22.0004 12.8188 21.8432 13.125 21.56C13.4312 21.2768 13.8329 21.1196 14.25 21.1196C14.6671 21.1196 15.0688 21.2768 15.375 21.56C15.6812 21.8432 16.0829 22.0004 16.5 22.0004C16.9171 22.0004 17.3188 21.8432 17.625 21.56L18.108 21.118C18.2828 20.9565 18.512 20.8668 18.75 20.8668C18.988 20.8668 19.2172 20.9565 19.392 21.118C20.015 21.688 21 21.232 21 20.374V6.37C21 5.177 21 4.58 20.842 4.1C20.6982 3.65441 20.4537 3.24792 20.1275 2.91202C19.8013 2.57612 19.4022 2.31982 18.961 2.163C18.493 2 17.914 2 16.755 2Z" stroke="white" stroke-width="1.5"/>
+                                    <path d="M9.5 10.4L10.929 12L14.5 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.5 15.5H16.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                  </svg>
+                                </span>
+                                <span class="">Notes</span>
+                              </div>
+                                <h6 class="mb-0">$25.50</h6>
+                              </div>
+                              </div>
+                             </div>
+                             <div class="footer-order-detail w-100">
+                              <div class="d-flex align-items-center justify-content-between w-100">
+                                <h6 class="paragraph-text">Items (4)</h6>
+                                <h6 class="body-color">$66.50</h6>
+                               </div>
+                               <div class="d-flex align-items-center justify-content-between w-100 border-bottom-1 mb-4 pb-4">
+                                <h6 class="paragraph-text">Tax (5%)</h6>
+                                <h6 class="body-color">$04.00</h6>
+                               </div>
+                               <div class="d-flex align-items-center justify-content-between w-100">
+                                <h6 class="">Total</h6>
+                                <h6 class="body-color">$70.00</h6>
+                               </div>
+                             </div>
+
+                              <div class="w-100 mt-md-4 mt-3">
+                                <button class="btn btn-custom  px-lg-5 px-md-4 w-100">Pay Bill 
+                                  <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                      <path d="M5.625 15H24.375M24.375 15L17.3438 7.5M24.375 15L17.3438 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                  </span>
+                              </button>
+                              </div>
+                          </li>
+                            <!-- Item -->
+                                                   
+                          <!-- More orders ... -->
+                        </ul>
+          
+             </aside> 
+    </div>
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="CreateOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="exampleModalLabel">Create New Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.79303 6.79301C6.98056 6.60553 7.23487 6.50022 7.50003 6.50022C7.76519 6.50022 8.0195 6.60553 8.20703 6.79301L12 10.586L15.793 6.79301C15.8853 6.69749 15.9956 6.62131 16.1176 6.5689C16.2396 6.51649 16.3709 6.48891 16.5036 6.48775C16.6364 6.4866 16.7681 6.5119 16.891 6.56218C17.0139 6.61246 17.1255 6.68672 17.2194 6.78061C17.3133 6.8745 17.3876 6.98615 17.4379 7.10905C17.4881 7.23195 17.5134 7.36363 17.5123 7.49641C17.5111 7.62919 17.4835 7.76041 17.4311 7.88241C17.3787 8.00441 17.3025 8.11476 17.207 8.207L13.414 12L17.207 15.793C17.3892 15.9816 17.49 16.2342 17.4877 16.4964C17.4854 16.7586 17.3803 17.0094 17.1948 17.1948C17.0094 17.3802 16.7586 17.4854 16.4964 17.4877C16.2342 17.49 15.9816 17.3892 15.793 17.207L12 13.414L8.20703 17.207C8.01843 17.3892 7.76583 17.49 7.50363 17.4877C7.24143 17.4854 6.99062 17.3802 6.80521 17.1948C6.6198 17.0094 6.51463 16.7586 6.51236 16.4964C6.51008 16.2342 6.61087 15.9816 6.79303 15.793L10.586 12L6.79303 8.207C6.60556 8.01948 6.50024 7.76517 6.50024 7.5C6.50024 7.23484 6.60556 6.98053 6.79303 6.79301Z" fill="white"/>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Bootstrap Tabs -->
+          <ul class="nav nav-pills mb-3 d-flex flex-wrap" id="pills-tab" role="tablist">
+            <li class="nav-item w-50  me-0 pe-2" role="presentation">
+              <button class="nav-link w-100 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Dine In</button>
+            </li>
+            <li class="nav-item w-50" role="presentation">
+              <button class="nav-link w-100" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Takeaway</button>
+            </li>            
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <form class="row g-3 needs-validation my-4" id="NewOrderForm" novalidate>
+                    <div class="col-md-12">
+                        <label for="validationCustom01" class="form-label">Customer Name <span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Customer Name" class="form-control" id="validationCustom01" required>                     
+                    </div>   
+                      <div class="col-md-12">                         
+                        <label for="validationCustom01" class="form-label">Guest <span class="text-danger d-none">*</span></label>
+                        <div class="input-group has-validation">  
+                          <div class="form-control position-relative d-flex justify-content-between">
+                            <button type="button" class="input-group-button" disabled id="DecrementBTN">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M19 12.998H5V10.998H19V12.998Z" fill="white"/>
+                                  </svg>
+                            </button>
+                            <input type="number" placeholder="01" class="border-0 form-control text-center fw-bold" id="InputItem">                     
+                            <button type="button" class="input-group-button" id="IncrementBTN">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z" fill="white"/>
+                                </svg>
+                            </button>
+                          </div>                      
+                        
+                        
+                        </div>
+                    </div> 
+                      <div class="col-md-12">                         
+                        <label for="validationCustom01" class="form-label">Choose Table <span class="text-danger">*</span></label>
+                        <select class="form-select form-control" id="validationCustom04" required>
+                        <option  value="">A1</option>
+                        <option>B1</option>
+                        </select>
+                    </div>                    
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-custom mt-3 w-100" type="submit">Login</button>
+                    </div>
+                    </form>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+              Tab2 Content
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Custom JS -->
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>

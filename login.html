@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Custom Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Restaurant Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-app-login">     
+        <!-- Main start here --> 
+         <main class="login-content" id="LoginPage">
+            <div class="card">
+                <div class="card-img text-center">
+                    <img src="assets/images/logo.svg" alt="The Grand Jamanvar" class="brand-logo" /> 
+                </div>
+               <form class="row g-3 needs-validation my-4" id="LoginForm" novalidate>
+                    <div class="col-md-12">
+                        <label for="validationCustom01" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="text" placeholder="name@example.com" class="form-control" id="validationCustom01" required>                     
+                    </div>   
+                      <div class="col-md-12">                         
+                        <label for="validationCustom01" class="form-label">Password <span class="text-danger">*</span></label>
+                        <div class="input-group has-validation">                        
+                        <input type="password" placeholder="Password" class="form-control" id="validationCustom01" required>                     
+                        <span class="input-group-text bg-transparent" id="inputGroupPrepend">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M255.66 112c-77.94 0-157.89 45.11-220.83 135.33a16 16 0 00-.27 17.77C82.92 340.8 161.8 400 255.66 400c92.84 0 173.34-59.38 221.79-135.25a16.14 16.14 0 000-17.47C428.89 172.28 347.8 112 255.66 112z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="256" r="80" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>
+                        </span>
+                        </div>
+                    </div> 
+                      <div class="col-md-12">                         
+                        <label for="validationCustom01" class="form-label">Role <span class="text-danger">*</span></label>
+                        <select class="form-select form-control" id="validationCustom04" required>
+                        <option  value="">Admin</option>
+                        <option>Waiter</option>
+                        </select>
+                    </div>                    
+                    <div class="col-12">
+                        <button class="btn btn-primary btn-custom mt-3 w-100" type="submit">Login</button>
+                    </div>
+                    </form>
+                    <div class="text-center">
+                        <a href="#">Forgot Password?</a>  
+                        <div class="select-dropdown">
+                            <select class="form-select form-control border-0 mt-3 w-25 mx-auto" id="validationCustom04">                    
+                                <option  value="">English</option>
+                                <option>Gujarati</option>
+                                <option>Hindi</option>
+                            </select>
+                    </div>
+
+            </div>
+         </main>
+         <!-- Main end here --> 
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Custom JS -->
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>

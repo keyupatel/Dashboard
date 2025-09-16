@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Custom Style CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Restaurant Dashboard</title>
+  </head>
+  <body>
+    <div class="dashboard-app">
+       <!-- Sidebar start here -->  
+        <aside class="sidebar" id="Sidebar" aria-label="primary">
+              <div class="brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/images/logo.svg" alt="The Grand Jamanvar" class="brand-logo" />  
+                     <img src="assets/images/fav-logo.png" alt="The Grand Jamanvar" class="fav-brand-logo" />                
+                </a>
+            </div>
+            <button class="sidebar-toggle-btn" id="SidebarToggleBTN">
+              <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="M328 112L184 256l144 144"/></svg>
+            </button>
+            <nav class="nav">
+              <ul class="nav-list ps-0" role="list">
+                <li>
+                  <a href="index.html" class="nav-link">
+                    <span class="menu-svg">
+                      <!-- <svg class="icon" hight="24" width="24"><use href="assets/icons.svg#icon-dashboard"></use></svg>  -->
+                       <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Dashboard
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="menu.html" class="nav-link">
+                    <span class="menu-svg">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M3 2H5V22H3V2ZM10 6H17V8H10V6ZM10 10H17V12H10V10Z" fill="white"/>
+                        <path d="M19 2H6V22H19C20.103 22 21 21.103 21 20V4C21 2.897 20.103 2 19 2ZM19 20H8V4H19V20Z" fill="white"/>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Menu
+                    </span>
+                    
+                  </a>
+                </li>
+                <li>
+                  <a href="orders.html" class="nav-link">
+                    <span class="menu-svg whitebg-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_8_87)" >
+                        <path d="M17.25 21.75H11.25M8.75 13.25H15.25M8.75 9.75H15.25M8.75 6.25H15.25M20.25 0.75H18.75V6.25H23.25V3.75C23.25 2.95435 22.9339 2.19129 22.3713 1.62868C21.8087 1.06607 21.0456 0.75 20.25 0.75Z" fill="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.5 17.25H3.75C2.95435 17.25 2.19129 17.5661 1.62868 18.1287C1.06607 18.6913 0.75 19.4544 0.75 20.25V23.25H11.25V19.5C11.25 18.9033 11.4871 18.331 11.909 17.909C12.331 17.4871 12.9033 17.25 13.5 17.25ZM13.5 17.25C14.0967 17.25 14.669 17.4871 15.091 17.909C15.5129 18.331 15.75 18.9033 15.75 19.5V20.25C15.75 20.6478 15.908 21.0294 16.1893 21.3107C16.4706 21.592 16.8522 21.75 17.25 21.75C17.6478 21.75 18.0294 21.592 18.3107 21.3107C18.592 21.0294 18.75 20.6478 18.75 20.25V0.75H8.25C7.45435 0.75 6.69129 1.06607 6.12868 1.62868C5.56607 2.19129 5.25 2.95435 5.25 3.75V17.25"  fill="white"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8_87">
+                        <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Orders
+                    </span>                    
+                  </a>
+                </li>
+                <li>
+                  <a href="tables.html" class="nav-link">
+                    <span class="menu-svg whitebg-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3V21M3 9H21" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Tables
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="nav-link nav-link-active">
+                    <span class="menu-svg">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <g clip-path="url(#clip0_8_89)">
+                        <path d="M7.5 7.5H7C6.99988 7.5657 7.01272 7.63079 7.03777 7.69153C7.06282 7.75227 7.0996 7.80748 7.146 7.854L7.5 7.5ZM7.5 14C5.77609 14 4.12279 13.3152 2.90381 12.0962C1.68482 10.8772 1 9.22391 1 7.5H0C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15V14ZM14 7.5C14 8.35359 13.8319 9.19883 13.5052 9.98744C13.1786 10.7761 12.6998 11.4926 12.0962 12.0962C11.4926 12.6998 10.7761 13.1786 9.98744 13.5052C9.19883 13.8319 8.35359 14 7.5 14V15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5H14ZM7.5 1C8.35359 1 9.19883 1.16813 9.98744 1.49478C10.7761 1.82144 11.4926 2.30023 12.0962 2.90381C12.6998 3.50739 13.1786 4.22394 13.5052 5.01256C13.8319 5.80117 14 6.64641 14 7.5H15C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0V1ZM7.5 0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5H1C1 5.77609 1.68482 4.12279 2.90381 2.90381C4.12279 1.68482 5.77609 1 7.5 1V0ZM7 0V7.5H8V0H7ZM7.724 7.947L13.724 4.947L13.276 4.053L7.276 7.053L7.724 7.947ZM7.146 7.854L12.146 12.854L12.854 12.146L7.854 7.146L7.146 7.854Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8_89">
+                        <rect width="15" height="15" fill="white"/>
+                        </clipPath>
+                        </defs>
+                     </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Accounting
+                    </span>                    
+                  </a>
+                </li>
+                 <li>
+                  <a href="settings.html" class="nav-link">
+                    <span class="menu-svg whitebg-svg">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_8_84)">
+                        <path d="M8 4.754C7.57373 4.754 7.15163 4.83796 6.75781 5.00108C6.36398 5.16421 6.00615 5.40331 5.70473 5.70473C5.40331 6.00615 5.16421 6.36398 5.00109 6.75781C4.83796 7.15163 4.754 7.57373 4.754 8C4.754 8.42627 4.83796 8.84837 5.00109 9.24219C5.16421 9.63601 5.40331 9.99385 5.70473 10.2953C6.00615 10.5967 6.36398 10.8358 6.75781 10.9989C7.15163 11.162 7.57373 11.246 8 11.246C8.86089 11.246 9.68652 10.904 10.2953 10.2953C10.904 9.68652 11.246 8.86089 11.246 8C11.246 7.1391 10.904 6.31347 10.2953 5.70473C9.68652 5.09599 8.86089 4.754 8 4.754ZM5.754 8C5.754 7.40432 5.99063 6.83304 6.41184 6.41184C6.83304 5.99063 7.40432 5.754 8 5.754C8.59567 5.754 9.16695 5.99063 9.58816 6.41184C10.0094 6.83304 10.246 7.40432 10.246 8C10.246 8.59567 10.0094 9.16695 9.58816 9.58816C9.16695 10.0094 8.59567 10.246 8 10.246C7.40432 10.246 6.83304 10.0094 6.41184 9.58816C5.99063 9.16695 5.754 8.59567 5.754 8Z" fill="white"/>
+                        <path d="M9.79599 1.343C9.26899 -0.446996 6.73099 -0.446996 6.20399 1.343L6.10999 1.662C6.07318 1.78696 6.00889 1.90209 5.9218 1.99896C5.83472 2.09584 5.72707 2.17199 5.60673 2.22186C5.48639 2.27172 5.35642 2.29402 5.22634 2.28712C5.09627 2.28023 4.96938 2.24431 4.85499 2.182L4.56299 2.022C2.92299 1.13 1.12999 2.924 2.02299 4.563L2.18199 4.855C2.24429 4.9694 2.28021 5.09628 2.28711 5.22636C2.294 5.35643 2.2717 5.48641 2.22184 5.60674C2.17198 5.72708 2.09582 5.83474 1.99895 5.92182C1.90207 6.0089 1.78694 6.0732 1.66199 6.11L1.34299 6.204C-0.447012 6.731 -0.447012 9.269 1.34299 9.796L1.66199 9.89C1.78694 9.92681 1.90207 9.99111 1.99895 10.0782C2.09582 10.1653 2.17198 10.2729 2.22184 10.3933C2.2717 10.5136 2.294 10.6436 2.28711 10.7736C2.28021 10.9037 2.24429 11.0306 2.18199 11.145L2.02199 11.437C1.12999 13.077 2.92299 14.871 4.56299 13.977L4.85499 13.818C4.96938 13.7557 5.09627 13.7198 5.22634 13.7129C5.35642 13.706 5.48639 13.7283 5.60673 13.7782C5.72707 13.828 5.83472 13.9042 5.9218 14.001C6.00889 14.0979 6.07318 14.2131 6.10999 14.338L6.20399 14.657C6.73099 16.447 9.26899 16.447 9.79599 14.657L9.88999 14.338C9.92679 14.2131 9.99109 14.0979 10.0782 14.001C10.1653 13.9042 10.2729 13.828 10.3932 13.7782C10.5136 13.7283 10.6436 13.706 10.7736 13.7129C10.9037 13.7198 11.0306 13.7557 11.145 13.818L11.437 13.978C13.077 14.871 14.871 13.076 13.977 11.437L13.818 11.145C13.7557 11.0306 13.7198 10.9037 13.7129 10.7736C13.706 10.6436 13.7283 10.5136 13.7781 10.3933C13.828 10.2729 13.9042 10.1653 14.001 10.0782C14.0979 9.99111 14.213 9.92681 14.338 9.89L14.657 9.796C16.447 9.269 16.447 6.731 14.657 6.204L14.338 6.11C14.213 6.0732 14.0979 6.0089 14.001 5.92182C13.9042 5.83474 13.828 5.72708 13.7781 5.60674C13.7283 5.48641 13.706 5.35643 13.7129 5.22636C13.7198 5.09628 13.7557 4.9694 13.818 4.855L13.978 4.563C14.871 2.923 13.076 1.13 11.437 2.023L11.145 2.182C11.0306 2.24431 10.9037 2.28023 10.7736 2.28712C10.6436 2.29402 10.5136 2.27172 10.3932 2.22186C10.2729 2.17199 10.1653 2.09584 10.0782 1.99896C9.99109 1.90209 9.92679 1.78696 9.88999 1.662L9.79599 1.343ZM7.16299 1.626C7.40899 0.791004 8.59099 0.791004 8.83699 1.626L8.93099 1.945C9.01001 2.21309 9.14802 2.46009 9.33491 2.6679C9.5218 2.87571 9.75283 3.03907 10.0111 3.14598C10.2693 3.2529 10.5482 3.30067 10.8273 3.28579C11.1064 3.27092 11.3786 3.19377 11.624 3.06L11.915 2.9C12.679 2.485 13.515 3.32 13.099 4.085L12.94 4.377C12.8064 4.62243 12.7295 4.89463 12.7148 5.17366C12.7 5.45269 12.7479 5.73147 12.8549 5.98959C12.9619 6.2477 13.1253 6.47861 13.3332 6.66538C13.541 6.85215 13.788 6.99006 14.056 7.069L14.374 7.163C15.209 7.409 15.209 8.591 14.374 8.837L14.055 8.931C13.7869 9.01002 13.5399 9.14804 13.3321 9.33493C13.1243 9.52182 12.9609 9.75285 12.854 10.0111C12.7471 10.2693 12.6993 10.5482 12.7142 10.8273C12.7291 11.1064 12.8062 11.3786 12.94 11.624L13.1 11.915C13.515 12.679 12.68 13.515 11.915 13.099L11.624 12.94C11.3785 12.8063 11.1062 12.7291 10.8271 12.7143C10.5479 12.6995 10.269 12.7474 10.0108 12.8544C9.75253 12.9614 9.52151 13.1249 9.33467 13.3328C9.14783 13.5407 9.00989 13.7878 8.93099 14.056L8.83699 14.374C8.59099 15.209 7.40899 15.209 7.16299 14.374L7.06899 14.055C6.98993 13.7871 6.85194 13.5402 6.66512 13.3325C6.4783 13.1248 6.24738 12.9615 5.98928 12.8546C5.73118 12.7477 5.45243 12.6999 5.17346 12.7147C4.89448 12.7294 4.62235 12.8064 4.37699 12.94L4.08499 13.1C3.32099 13.515 2.48499 12.68 2.90099 11.915L3.05999 11.624C3.19394 11.3786 3.27124 11.1062 3.28621 10.827C3.30119 10.5478 3.25346 10.2688 3.14653 10.0104C3.0396 9.75209 2.87618 9.52095 2.66827 9.33399C2.46035 9.14703 2.21321 9.00899 1.94499 8.93L1.62599 8.836C0.790988 8.59 0.790988 7.408 1.62599 7.162L1.94499 7.068C2.21279 6.98891 2.45953 6.85094 2.66713 6.66419C2.87473 6.47744 3.03795 6.24663 3.14484 5.98866C3.25173 5.73069 3.29959 5.45208 3.2849 5.17322C3.27022 4.89437 3.19338 4.62233 3.05999 4.377L2.89999 4.085C2.48499 3.321 3.31999 2.485 4.08499 2.901L4.37699 3.06C4.62235 3.19358 4.89448 3.27058 5.17346 3.28536C5.45243 3.30014 5.73118 3.25232 5.98928 3.14542C6.24738 3.03852 6.4783 2.87523 6.66512 2.66752C6.85194 2.45982 6.98993 2.21295 7.06899 1.945L7.16299 1.626Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_8_84">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Settings
+                    </span>
+                    
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            <div class="sidebar-spacer d-md-none" aria-hidden="true"></div>
+            <div class="account">
+              <button class="account-user nav-link mb-0" type="button">
+                <img class="account-avatar img-fluid" src="./assets/images/avtar.jpg" alt="avtar" />
+                <span class="account-meta text-menu nav">
+                  <strong class="account-name">Keyur Patel</strong>
+                  <span class="account-role">Owner</span>
+                </span>
+              </button>
+
+               <a href="login.html" class="nav-link account-logout">
+                    <span class="menu-svg whitebg-svg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M20 12H10.5M18 15L21 12L18 9M13 7V6C13 5.46957 12.7893 4.96086 12.4142 4.58579C12.0391 4.21071 11.5304 4 11 4H6C5.46957 4 4.96086 4.21071 4.58579 4.58579C4.21071 4.96086 4 5.46957 4 6V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H11C11.5304 20 12.0391 19.7893 12.4142 19.4142C12.7893 19.0391 13 18.5304 13 18V17" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="text-menu ms-3">
+                      Logout
+                    </span>                    
+                  </a>
+            </div>
+        </aside>
+        <!-- Sidebar end here -->  
+        <!-- Main start here --> 
+         <main class="main" id="main-content">
+              <!-- Topbar -->
+              <header class="topbar mb-md-5">
+                <h1 class="topbar-title">Accounting</h1>
+                <h4 class="topbar-meta">
+                  <time datetime="2025-08-27">Saturday, 13 September 2025</time>                
+                </h4>
+              </header>
+              <section class="dashboard-main-content row">
+                <div class="dashboard-left-section  col-md-9">
+                    <div class="row">
+                     <!-- Order List -->
+                     <div class="panel" aria-labelledby="orders-heading">
+                          <div class="panel-header">
+                            <div class="d-flex align-items-center justify-content-between border-bottom-1 pb-3 mb-3">
+                              <h4 id="orders-heading" class="panel-title mb-0">Monthly Income</h4>
+                              <h4 id="orders-heading" class="panel-title mb-0">$25,500</h4>
+                            </div>
+                          </div>
+                          <div class="mt-md-4">
+                            <img src="./assets/images/chart.png" alt="chart" class="img-fluid w-100">
+                          </div>
+                        </div>
+                        
+                          <div class="panel mt-md-4" aria-labelledby="orders-heading">
+                          <div class="panel-header">
+                            <div class="d-flex align-items-center justify-content-between border-bottom-1 pb-3 mb-3">
+                              <h4 id="orders-heading" class="panel-title mb-0">Expenses</h4>
+                            </div>
+                          </div>
+                            <ul class="list list--orders" role="list">
+                          <!-- Item -->                          
+                          <li class="order align-items-center justify-content-between">
+                           <h4 id="orders-heading" class="panel-title mb-0">
+                              <span class="me-2 account-salaries">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                  <path d="M19 6.5H16V5.5C16 4.70435 15.6839 3.94129 15.1213 3.37868C14.5587 2.81607 13.7956 2.5 13 2.5H11C10.2044 2.5 9.44129 2.81607 8.87868 3.37868C8.31607 3.94129 8 4.70435 8 5.5V6.5H5C4.20435 6.5 3.44129 6.81607 2.87868 7.37868C2.31607 7.94129 2 8.70435 2 9.5V18.5C2 19.2956 2.31607 20.0587 2.87868 20.6213C3.44129 21.1839 4.20435 21.5 5 21.5H19C19.7956 21.5 20.5587 21.1839 21.1213 20.6213C21.6839 20.0587 22 19.2956 22 18.5V9.5C22 8.70435 21.6839 7.94129 21.1213 7.37868C20.5587 6.81607 19.7956 6.5 19 6.5ZM10 5.5C10 5.23478 10.1054 4.98043 10.2929 4.79289C10.4804 4.60536 10.7348 4.5 11 4.5H13C13.2652 4.5 13.5196 4.60536 13.7071 4.79289C13.8946 4.98043 14 5.23478 14 5.5V6.5H10V5.5ZM20 18.5C20 18.7652 19.8946 19.0196 19.7071 19.2071C19.5196 19.3946 19.2652 19.5 19 19.5H5C4.73478 19.5 4.48043 19.3946 4.29289 19.2071C4.10536 19.0196 4 18.7652 4 18.5V13.45H7V14.5C7 14.7652 7.10536 15.0196 7.29289 15.2071C7.48043 15.3946 7.73478 15.5 8 15.5C8.26522 15.5 8.51957 15.3946 8.70711 15.2071C8.89464 15.0196 9 14.7652 9 14.5V13.45H15V14.5C15 14.7652 15.1054 15.0196 15.2929 15.2071C15.4804 15.3946 15.7348 15.5 16 15.5C16.2652 15.5 16.5196 15.3946 16.7071 15.2071C16.8946 15.0196 17 14.7652 17 14.5V13.45H20V18.5ZM20 11.5H4V9.5C4 9.23478 4.10536 8.98043 4.29289 8.79289C4.48043 8.60536 4.73478 8.5 5 8.5H19C19.2652 8.5 19.5196 8.60536 19.7071 8.79289C19.8946 8.98043 20 9.23478 20 9.5V11.5Z" fill="white"/>
+                                </svg>
+                              </span> 
+                              Salaries
+                            </h4>
+                            <h4 id="orders-heading" class="panel-title mb-0">$12,000</h4>
+                          </li>
+                          <!-- Item --> 
+                       <li class="order align-items-center justify-content-between">
+                           <h4 id="orders-heading" class="panel-title mb-0">
+                              <span class="me-2 account-expenses">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 8H20C20.2652 8 20.5196 8.10536 20.7071 8.29289C20.8946 8.48043 21 8.73478 21 9V9.5C21 11 18.483 15.073 17 16V17C17 17.2652 16.8946 17.5196 16.7071 17.7071C16.5196 17.8946 16.2652 18 16 18H8C7.73478 18 7.48043 17.8946 7.29289 17.7071C7.10536 17.5196 7 17.2652 7 17V16C5.313 14.946 3 11 3 9.5V9C3 8.73478 3.10536 8.48043 3.29289 8.29289C3.48043 8.10536 3.73478 8 4 8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                              </span> 
+                              Utilities
+                            </h4>
+                            <h4 id="orders-heading" class="panel-title mb-0">$14,00</h4>
+                          </li>
+                             <!-- Item --> 
+                                     <!-- Item -->                          
+                          <li class="order align-items-center justify-content-between border-0 pb-0">
+                           <h4 id="orders-heading" class="panel-title mb-0">
+                              <span class="me-2 account-expenses">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                  <path d="M8.66669 10.8333V7.58333C8.66669 6.43406 9.12323 5.33186 9.93589 4.5192C10.7485 3.70655 11.8507 3.25 13 3.25C14.1493 3.25 15.2515 3.70655 16.0641 4.5192C16.8768 5.33186 17.3334 6.43406 17.3334 7.58333V10.8333" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                  <path d="M5.41669 10.8333H20.5834V20.5833C20.5834 21.158 20.3551 21.7091 19.9488 22.1154C19.5424 22.5217 18.9913 22.75 18.4167 22.75H7.58335C7.00872 22.75 6.45762 22.5217 6.05129 22.1154C5.64496 21.7091 5.41669 21.158 5.41669 20.5833V10.8333Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                                  <path d="M15.7084 16.7917H15.7192V16.8025H15.7084V16.7917Z" stroke="white" stroke-width="2.25" stroke-linejoin="round"/>
+                                </svg>
+                              </span> 
+                              Maintainance
+                            </h4>
+                            <h4 id="orders-heading" class="panel-title mb-0">$3,000</h4>
+                          </li>
+                             <!-- Item -->                          
+                        
+                         
+                          <!-- More orders ... -->
+                        </ul>
+                        </div>
+                </div>
+                </div>
+                <div class="dashboard-right-section col-md-3">                 
+                  <section class="popular-dishes">
+                      <div class="panel" aria-labelledby="orders-heading">
+                          <div class="panel-header">
+                            <div class="d-flex align-items-center justify-content-between">
+                              <h4 id="orders-heading" class="panel-title mb-0">Recent Transection</h4>                           
+                          </div>
+                        </div>
+                        <ul class="">
+                          <li class="d-flex  mb-3 pb-3 border-bottom-1 justify-content-between">
+                            <div class="d-block">
+                              <h6 class="mb-md-0">Invoice #021</h6>
+                              <small class="mb-md-0">September 2025</small>
+                            </div>
+                            <h6 class="mb-md-0">$150.00</h6>
+                          </li>
+                           <li class="d-flex  mb-3 pb-3 border-bottom-1 justify-content-between">
+                            <div class="d-block">
+                              <h6 class="mb-md-0">Payment #020</h6>
+                              <small class="mb-md-0">September 2025</small>
+                            </div>
+                            <h6 class="mb-md-0">$550.00</h6>
+                          </li>
+                           <li class="d-flex  mb-3 pb-3 border-bottom-1 justify-content-between">
+                            <div class="d-block">
+                              <h6 class="mb-md-0">Refund #027</h6>
+                              <small class="mb-md-0">September 2025</small>
+                            </div>
+                            <h6 class="mb-md-0">$50.00</h6>
+                          </li>
+                          
+                        </ul>
+                        <ul class="pt-3">
+                          <li class="d-flex align-items-center mb-3">
+                            <h6 class="me-2">$ <span class="ps-2">Facebook Ads</span></h6>
+                          </li>
+                          <li class="d-flex align-items-center mb-3">
+                            <h6 class="me-2">$ <span class="ps-2">Consulting</span></h6>
+                          </li>
+                          <li class="d-flex align-items-center mb-3">
+                            <h6 class="me-2">$ <span class="ps-2">Services</span></h6>
+                          </li>
+                          <li class="d-flex align-items-center mb-3">
+                            <h6 class="me-2">$ <span class="ps-2">Food & Dining</span></h6>
+                          </li>
+                          <li class="d-flex align-items-center">
+                            <h6 class="me-2">$ <span class="ps-2">Transportation</span></h6>
+                          </li>
+                          
+                        </ul>
+                     </div>
+                    </section>
+                     
+                  
+                </div>
+                
+              </section>            
+              <footer class="dashboard-footer text-center py-3">
+                <p class="mb-0">
+                  &copy; 2025 <strong>Keju Patel </strong>. All rights reserved.
+                </p>
+                <small class="text-muted">
+                  Dashboard UI designed & developed by Pranamai IT.
+                </small>
+              </footer>
+            </main>
+         <!-- Main end here --> 
+           
+    </div>
+
+
+   
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Custom JS -->
+    <script src="./assets/js/custom.js"></script>
+  </body>
+</html>

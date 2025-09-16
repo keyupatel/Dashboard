@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+  <!-- Home Icon -->
+  <symbol id="icon-home" viewBox="0 0 24 24">
+    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+  </symbol>
+  <!-- Dashboard Icon -->
+  <symbol id="icon-dashboard" viewBox="0 0 24 24">
+    <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
+  </symbol>
+  <!-- Settings Icon -->
+  <symbol id="icon-menuitem" viewBox="0 0 24 24">
+   <path d="M3 2H5V22H3V2ZM10 6H17V8H10V6ZM10 10H17V12H10V10Z"/>
+    <path d="M19 2H6V22H19C20.103 22 21 21.103 21 20V4C21 2.897 20.103 2 19 2ZM19 20H8V4H19V20Z"/>
+</symbol>
+  
+
+</svg>

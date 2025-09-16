@@ -1,0 +1,58 @@
+// COLOR 
+
+$primary-color:#47210C;
+$secondary-color:#FFCB45;
+$heading-text-color:#111111;
+$Secondary-heading-text-color:#4D4D4D;
+$paragraph-text-color:#ABABAB;
+$background-color:#F0F1EC;
+$white-color:#FFFFFF;
+$input-bg-color:#F1F1F1;
+$border-color:#DDDDDD;
+$status-cloning:#C6C5C7;
+$status-completed:#1B52D3;
+$status-reserved:#EA4650;
+$status-inprogress:#FED346;
+$status-available:#0E744A;
+
+// Font Family
+
+$body-font: "Inter", sans-serif;
+
+// Font-size
+
+$H1: 2rem;
+$H2: 1.8rem;
+$H4: 1.5rem;
+$h5: 1.3rem;
+$h6 : 1.15rem;
+$p: 1.125rem;
+
+// Font Weight
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+// Border-radius 
+
+
+$radius-6: 0.375;
+$radius-15: 1rem;
+$radius-30: 1.5rem;
+$full-radius: 100rem;
+
+// ===========================
+// Responsive Breakpoints
+// ===========================
+$breakpoints: (
+  "xs": 480px,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px
+);
+
+
+

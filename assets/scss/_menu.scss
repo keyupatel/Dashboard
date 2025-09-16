@@ -1,0 +1,72 @@
+@use "_var.scss" as *;
+@use "_mixins.scss" as *;
+@use "_dashboard.scss" as *;
+body{
+    .menu-page{
+        overflow-x: hidden ;
+        .sidebar{
+            max-width: 25rem;
+        }
+        .choose-menu{
+            @include flex-center;
+            height: 2.5rem;
+            width: 2.5rem;
+            border: none;
+            background: $white-color;
+            border-radius: 1.5rem;
+            svg{
+                transform: rotate(-180deg);
+                path{
+                    stroke: $primary-color;
+                }
+            }
+            &:hover{
+                background-color: $primary-color;
+                svg{
+                transform: rotate(-180deg);
+                path{
+                    stroke: $white-color;
+                }
+            }
+            }
+        }
+        .search{
+            .form-control{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .input-group-text {
+                background-color: $white-color !important;
+            }
+        }
+        footer{
+            left: 0;
+            width: calc(100% - 400px);
+        }
+    }
+    .nav-item{
+        margin-bottom: 1.5rem;
+        .nav-link{
+             background-color: $white-color;
+            border-radius: $radius-15;
+            padding: 1.25rem;
+        
+        h4, h5{
+            color: $heading-text-color;
+        }
+        &:hover{
+            color: $white-color !important;
+             h4, h5{
+               color: $white-color;
+            }
+        }
+    }
+     .nav-link.active{
+        color: $white-color !important;
+             h4, h5{
+               color: $white-color;
+            }
+     }
+    }
+    
+}
